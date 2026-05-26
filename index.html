@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo SINAMEC-Laser — Corte y Grabado Artesanal</title>
+  <meta name="description" content="Piezas artesanales únicas en MDF y acrílico. Corte y grabado láser de precisión: decoraciones, regalos personalizados, letreros y más." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<nav id="main-navbar" class="navbar navbar-expand-lg sticky-top py-2">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="d-flex align-items-center gap-2 text-decoration-none" href="#" onclick="navigate('inicio');return false;">
+      <img src="images/logo.jpeg" alt="SINAMEC-Laser" class="brand-icon" />
+      <span class="d-flex flex-column lh-1">
+        <small class="brand-sub">Grupo</small>
+        <span class="brand-name">SINAMEC<span class="brand-accent">-Labs</span></span>
+      </span>
+    </a>
+
+    <!-- Mobile toggler -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto d-flex align-items-lg-center gap-1 py-2 py-lg-0">
+        <button class="nav-link-custom active" data-page="inicio">Inicio</button>
+        <button class="nav-link-custom" data-page="servicios">Servicios</button>
+        <button class="nav-link-custom" data-page="portafolio">Portafolio</button>
+        <button class="nav-link-custom" data-page="contacto">Contacto</button>
+        <button class="btn btn-wood ms-lg-2 px-3 py-2" style="font-size:.82rem;" onclick="openWhatsApp()">
+          <i class="bi bi-whatsapp me-1"></i> Cotizar
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════
+     PÁGINA: INICIO
+══════════════════════════════════════════════ -->
+<div id="page-inicio" class="page active">
+  <div class="container py-4">
+
+    <!-- Hero -->
+    <div class="hero-section mb-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-eyebrow"><span>✦</span> Empresa Mexicana </div>
+          <h1 class="hero-title mb-3">
+            Piezas <em>artesanales</em><br>con corte y grabado<br><em>láser.</em>
+          </h1>
+          <p class="hero-lead mb-4">
+            Creamos diseños únicos en <strong style="color:#E8A85A">MDF</strong> y <strong style="color:#38BDF8">Acrílico</strong> — decoraciones, regalos personalizados, letreros, llaveros y mucho más. Cada pieza es especial.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <button class="btn btn-wood px-4 py-2" onclick="navigate('portafolio')">
+              Ver catálogo <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+            <button class="btn btn-ghost-light px-4 py-2" onclick="navigate('contacto')">
+              Pedir cotización <i class="bi bi-chat-dots ms-1"></i>
+            </button>
+          </div>
+          <div class="d-flex flex-wrap gap-2 pt-3" style="border-top:1px solid rgba(200,133,58,.18)">
+            <span class="hero-badge"><span class="hero-badge-dot"></span> MDF</span>
+            <span class="hero-badge"><span class="hero-badge-dot" style="background:#38BDF8"></span> Acrílico</span>
+            <span class="hero-badge"><span class="hero-badge-dot" style="background:#A78BFA"></span> Diseño personalizado</span>
+            <span class="hero-badge"><span class="hero-badge-dot"></span> Impresión 3D </span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="hero-panel">
+            <div class="hero-panel-title"><i class="bi bi-grid-3x3-gap me-2" style="color:#E8A85A"></i>Lo que creamos</div>
+            <div class="material-chip"><span style="font-size:1.1rem">🏠</span><span><div class="material-chip-name">Decoración del Hogar</div><div class="material-chip-sub">Cuadros, marcos, letras 3D, mandalas</div></span></div>
+            <div class="material-chip"><span style="font-size:1.1rem">🎁</span><span><div class="material-chip-name">Regalos Personalizados</div><div class="material-chip-sub">Nombres, fechas, fotos grabadas</div></span></div>
+            <div class="material-chip"><span style="font-size:1.1rem">🔤</span><span><div class="material-chip-name">Letreros y Señalética</div><div class="material-chip-sub">Negocios, bodas, eventos</div></span></div>
+            <div class="material-chip"><span style="font-size:1.1rem">🗝️</span><span><div class="material-chip-name">Llaveros y Accesorios</div><div class="material-chip-sub">Diseños únicos en acrílico y MDF</div></span></div>
+            <div class="material-chip"><span style="font-size:1.1rem">🎄</span><span><div class="material-chip-name">Temporadas y Fiestas</div><div class="material-chip-sub">Navidad, 14 Feb, Día de Muertos</div></span></div>
+            <div class="material-chip"><span style="font-size:1.1rem">🖼️</span><span><div class="material-chip-name">Arte y Diseño Libre</div><div class="material-chip-sub">Tu idea hecha realidad</div></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ¿Por qué elegirnos? -->
+    <div class="row g-3 mb-5 reveal-el">
+      <div class="col-12 mb-1"><h3 class="fw-bold" style="font-family:'Playfair Display',serif;font-size:1.15rem;">¿Por qué elegirnos?</h3></div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="pillar-card h-100"><div class="pillar-icon">✂️</div><h5 class="fw-bold fs-6 mb-2">Corte de precisión</h5><p class="small text-secondary mb-0">Tecnología láser que garantiza acabados limpios y detalles finos en cada pieza.</p></div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="pillar-card h-100"><div class="pillar-icon">🎨</div><h5 class="fw-bold fs-6 mb-2">Diseño a tu medida</h5><p class="small text-secondary mb-0">Enviamos tu diseño o te ayudamos a crearlo — trabajamos contigo hasta que sea perfecto.</p></div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="pillar-card h-100"><div class="pillar-icon">⭐</div><h5 class="fw-bold fs-6 mb-2">Garantía de calidad  </h5><p class="small text-secondary mb-0">Cada pieza pasa por revisión manual para asegurar precisión y acabado profesional.</p></div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="pillar-card h-100"><div class="pillar-icon">💬</div><h5 class="fw-bold fs-6 mb-2">Atención personalizada</h5><p class="small text-secondary mb-0">Respondemos rápido por WhatsApp. Cotización sin compromiso en todo momento.</p></div>
+      </div>
+    </div>
+
+    <!-- Materiales -->
+    <div class="row g-4 mb-5 reveal-el">
+      <div class="col-lg-5">
+        <span class="section-tag">📋 Materiales</span>
+        <h2 class="section-title mb-3">Trabajamos con<br>los mejores materiales.</h2>
+        <p class="section-lead">Seleccionamos cuidadosamente cada lámina para garantizar piezas de alta calidad.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="sn-card p-4 h-100">
+              <div style="font-size:2rem;margin-bottom:10px"></div>
+              <h5 class="fw-bold mb-2" style="color:var(--wood)">MDF</h5>
+              <p class="small text-secondary mb-3">Tablero de fibra de densidad media. Ideal para decoraciones, letreros y piezas estructuradas. Acepta pintura, barniz y acabados naturales.</p>
+              <span class="pill-mdf">3mm</span><span class="pill-mdf">5.5mm</span><span class="pill-mdf">Natural</span><span class="pill-mdf">Pintado</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="sn-card p-4 h-100">
+              <div style="font-size:2rem;margin-bottom:10px"></div>
+              <h5 class="fw-bold mb-2" style="color:var(--acrylic)">Acrílico</h5>
+              <p class="small text-secondary mb-3">Plástico transparente o de colores. Perfecto para letreros brillantes, llaveros y piezas decorativas con efecto vidrio.</p>
+              <span class="pill-acrylic">Transparente</span><span class="pill-acrylic">De colores</span><span class="pill-acrylic">Espejo</span><span class="pill-acrylic">3mm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-strip mb-5 reveal-el">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="mb-2">¿Tienes un diseño en mente?</h2>
+          <p class="mb-0">Cuéntanos tu idea y te damos una cotización sin compromiso. ¡Hacemos realidad lo que imaginas!</p>
+        </div>
+        <div class="col-md-4 d-flex justify-content-md-end mt-3 mt-md-0">
+          <button class="btn btn-wood px-4 py-2" onclick="openWhatsApp()">
+            <i class="bi bi-whatsapp me-1"></i> Cotizar por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /page-inicio -->
+
+
+<!-- ══════════════════════════════════════════════
+     PÁGINA: SERVICIOS
+══════════════════════════════════════════════ -->
+<div id="page-servicios" class="page">
+  <div class="container py-5">
+
+    <span class="section-tag">✦ Lo que hacemos</span>
+    <h2 class="section-title mb-3">Nuestros servicios.</h2>
+    <p class="section-lead mb-5">Desde una pieza única hasta pedidos en volumen — trabajamos con la misma dedicación.</p>
+
+    <div class="row g-4 mb-5">
+      <!-- Servicio 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <span class="service-icon">✂️</span>
+          <h5 class="fw-bold mb-2">Corte Láser</h5>
+          <p class="small text-secondary">Corte limpio y preciso en MDF y acrílico de distintos espesores. Ideal para formas complejas, calados y detalles finos.</p>
+          <div class="mb-3"><span class="pill-mdf">MDF</span><span class="pill-acrylic">Acrílico</span></div>
+          <div class="small text-secondary"><strong style="font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark)">Ejemplos:</strong><br>
+            <span class="example-tag">Figuras decorativas</span><span class="example-tag">Letras 3D</span><span class="example-tag">Marcos</span><span class="example-tag">Siluetas</span>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <span class="service-icon">🖊️</span>
+          <h5 class="fw-bold mb-2">Grabado Láser</h5>
+          <p class="small text-secondary">Grabado permanente de texto, imágenes, logos y diseños con precisión milimétrica sobre la superficie.</p>
+          <div class="mb-3"><span class="pill-mdf">MDF</span><span class="pill-acrylic">Acrílico</span></div>
+          <div class="small text-secondary"><strong style="font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark)">Ejemplos:</strong><br>
+            <span class="example-tag">Nombres y fechas</span><span class="example-tag">Logos</span><span class="example-tag">Fotografías</span><span class="example-tag">Coordenadas</span>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <span class="service-icon">🎨</span>
+          <h5 class="fw-bold mb-2">Diseño Personalizado</h5>
+          <p class="small text-secondary">¿No tienes el archivo? Te ayudamos a crear o adaptar tu diseño con vista previa digital antes de cortar.</p>
+          <div class="mb-3"><span class="pill-both">MDF y Acrílico</span></div>
+          <div class="small text-secondary"><strong style="font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark)">Ejemplos:</strong><br>
+            <span class="example-tag">Desde tu idea</span><span class="example-tag">Vectorización</span><span class="example-tag">Adaptación de logos</span>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <span class="service-icon">🏠</span>
+          <h5 class="fw-bold mb-2">Decoración del Hogar</h5>
+          <p class="small text-secondary">Piezas decorativas únicas — cuadros, mandalas, letras, organizadores y centros de mesa artesanales.</p>
+          <div class="mb-3"><span class="pill-mdf">MDF</span></div>
+          <div class="small text-secondary"><strong style="font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark)">Ejemplos:</strong><br>
+            <span class="example-tag">Mandalas</span><span class="example-tag">Cuadros con frases</span><span class="example-tag">Letras decorativas</span>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <span class="service-icon">🎁</span>
+          <h5 class="fw-bold mb-2">Regalos Personalizados</h5>
+          <p class="small text-secondary">El regalo perfecto lleva nombre o mensaje especial. Para bodas, XV años, graduaciones y más ocasiones.</p>
+          <div class="mb-3"><span class="pill-mdf">MDF</span><span class="pill-acrylic">Acrílico</span></div>
+          <div class="small text-secondary"><strong style="font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark)">Ejemplos:</strong><br>
+            <span class="example-tag">Cajas de regalo</span><span class="example-tag">Portarretratos</span><span class="example-tag">Detalles de boda</span>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <span class="service-icon">🏪</span>
+          <h5 class="fw-bold mb-2">Letreros para Negocio</h5>
+          <p class="small text-secondary">Letreros, menús y señalética de alto impacto. Presentación profesional a precio accesible para tu negocio.</p>
+          <div class="mb-3"><span class="pill-mdf">MDF</span><span class="pill-acrylic">Acrílico</span></div>
+          <div class="small text-secondary"><strong style="font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dark)">Ejemplos:</strong><br>
+            <span class="example-tag">Letreros de nombre</span><span class="example-tag">Menús</span><span class="example-tag">Señalética</span><span class="example-tag">Logos 3D</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proceso -->
+    <div class="row g-5 align-items-center mb-5 reveal-el">
+      <div class="col-lg-5">
+        <span class="section-tag purple">🔄 Proceso</span>
+        <h2 class="section-title mb-3">Así es trabajar con nosotros.</h2>
+        <p class="section-lead">Sencillo, rápido. Tu pieza lista en 3–5 días hábiles.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="d-flex gap-3 mb-4">
+          <div class="step-number flex-shrink-0">01</div>
+          <div><h5 class="fw-bold fs-6 mb-1">Comparte tu idea</h5><p class="small text-secondary mb-0">Escríbenos por WhatsApp. Cuéntanos qué quieres: medidas, material, diseño y cantidad.</p></div>
+        </div>
+        <div class="d-flex gap-3 mb-4">
+          <div class="step-number flex-shrink-0">02</div>
+          <div><h5 class="fw-bold fs-6 mb-1">Recibe tu cotización</h5><p class="small text-secondary mb-0">En pocas horas te enviamos precio, tiempo de entrega y vista previa digital para que apruebes.</p></div>
+        </div>
+        <div class="d-flex gap-3 mb-4">
+          <div class="step-number flex-shrink-0">03</div>
+          <div><h5 class="fw-bold fs-6 mb-1">Confirmamos y producimos</h5><p class="small text-secondary mb-0">Apruebas y pagas — comenzamos. Cada pieza pasa por control de calidad antes de salir.</p></div>
+        </div>
+        <div class="d-flex gap-3">
+          <div class="step-number flex-shrink-0">04</div>
+          <div><h5 class="fw-bold fs-6 mb-1">Entregamos con cuidado</h5><p class="small text-secondary mb-0">Empacamos y enviamos a tu puerta. También puedes recoger personalmente.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA servicios -->
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 p-4 rounded-3 reveal-el" style="border:2px solid var(--wood-border);background:var(--wood-pale);">
+      <div>
+        <h5 class="fw-bold mb-1">¿Listo para cotizar?</h5>
+        <p class="mb-0 small text-secondary">Escríbenos — respondemos en menos de 1 hora en horario de oficina.</p>
+      </div>
+      <button class="btn btn-wood px-4 py-2 flex-shrink-0" onclick="openWhatsApp()">
+        <i class="bi bi-whatsapp me-1"></i> Escribir por WhatsApp
+      </button>
+    </div>
+
+  </div>
+</div><!-- /page-servicios -->
+
+
+<!-- ══════════════════════════════════════════════
+     PÁGINA: PORTAFOLIO
+══════════════════════════════════════════════ -->
+<div id="page-portafolio" class="page">
+  <div class="container py-5">
+
+    <span class="section-tag">🖼️ Catálogo</span>
+    <h2 class="section-title mb-3">Nuestras creaciones.</h2>
+    <p class="section-lead mb-1">Toca cualquier producto para ver todas las variantes y estilos disponibles.</p>
+    <p class="small mb-4" style="color:var(--gray-light)"><i class="bi bi-images"></i> Haz clic en <strong>"Ver galería"</strong> para explorar múltiples fotos de cada producto.</p>
+
+    <!-- Products grid rendered by JS -->
+    <div class="row g-4 mb-5" id="products-grid"></div>
+
+    <!-- CTA portafolio -->
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 p-4 rounded-3 reveal-el" style="border:2px solid var(--wood-border);">
+      <div>
+        <h5 class="fw-bold mb-1">¿Quieres algo diferente?</h5>
+        <p class="mb-0 small text-secondary">Hacemos prácticamente cualquier diseño en MDF o acrílico.</p>
+      </div>
+      <button class="btn btn-purple px-4 py-2 flex-shrink-0" onclick="navigate('contacto')">
+        Pedir diseño personalizado <i class="bi bi-arrow-right ms-1"></i>
+      </button>
+    </div>
+
+  </div>
+</div><!-- /page-portafolio -->
+
+
+<!-- ══════════════════════════════════════════════
+     PÁGINA: CONTACTO
+══════════════════════════════════════════════ -->
+<div id="page-contacto" class="page">
+  <div class="container py-5">
+
+    <span class="section-tag">📬 Contacto</span>
+    <h2 class="section-title mb-3">Hablemos de<br>tu proyecto.</h2>
+    <p class="section-lead mb-5">Contacto directo, respuesta rápida. Sin complicaciones.</p>
+
+    <!-- Quick contact cards -->
+     <!--
+    <div class="row g-3 mb-5">
+      <div class="col-md-6">
+        <div class="contact-card h-100">
+          <div class="icon-badge" style="background:#e7fdf0">💬</div>
+          <h6>WhatsApp</h6>
+          <div class="val">+52 5661381199</div>
+          <div class="sub mb-3">Respuesta en menos de 1 hora · Lun–Sáb 9–18 h</div>
+          <button class="btn btn-whatsapp px-4 py-2" onclick="openWhatsApp()">
+            <i class="bi bi-whatsapp me-1"></i> Escribir por WhatsApp
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-card h-100">
+          <div class="icon-badge" style="background:#fde8e8">📧</div>
+          <h6>Correo electrónico</h6>
+          <div class="val">laser@grupsinamec.com</div>
+          <div class="sub mb-3">Respuesta en 24 horas hábiles</div>
+          <a href="mailto:laser@grupsinamec.com" class="btn btn-email px-4 py-2">
+            <i class="bi bi-envelope me-1"></i> Enviar correo
+          </a>
+        </div>
+      </div>
+    </div>
+       Formulario -->
+
+    <!-- Formulario -->
+    <div class="sn-card p-4 p-md-5 mb-5">
+      <h5 class="fw-bold mb-1" style="font-family:'Playfair Display',serif">Formulario de cotización</h5>
+      <p class="text-secondary small mb-4">Completa los datos y te contactamos por WhatsApp o correo.</p>
+      <form id="contact-form" novalidate>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em" for="cname">Nombre completo</label>
+            <input id="cname" type="text" class="form-control" placeholder="Tu nombre" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em" for="ccompany">Empresa (opcional)</label>
+            <input id="ccompany" type="text" class="form-control" placeholder="Nombre de tu empresa" />
+          </div>
+        </div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em" for="cemail">Correo electrónico</label>
+            <input id="cemail" type="email" class="form-control" placeholder="correo@ejemplo.com" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em" for="cproduct">Producto de interés</label>
+            <select id="cproduct" class="form-select">
+              <option value="">Selecciona...</option>
+              <option>Decoración del hogar</option>
+              <option>Regalo personalizado</option>
+              <option>Letrero para negocio</option>
+              <option>Llaveros y accesorios</option>
+              <option>Toppers para pastel</option>
+              <option>Decoración de temporada</option>
+              <option>Diseño personalizado</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em" for="cmessage">¿Qué tienes en mente?</label>
+          <textarea id="cmessage" class="form-control" rows="4" placeholder="Cuéntanos tu idea: material, tamaño, diseño, cantidad..."></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="form-label d-block" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Enviar por</label>
+          <div class="d-flex gap-4">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="chan" id="ch-wa" value="wa" checked />
+              <label class="form-check-label fw-semibold small" for="ch-wa">WhatsApp</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="chan" id="ch-em" value="email" />
+              <label class="form-check-label fw-semibold small" for="ch-em">Correo</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-wood px-4 py-2">
+          <i class="bi bi-send me-1"></i> Enviar mensaje
+        </button>
+      </form>
+    </div>
+
+    <!-- Info cards -->
+    <div class="row g-3 reveal-el">
+      <div class="col-md-4">
+        <div class="contact-card h-100 text-center"><div style="font-size:1.8rem;margin-bottom:8px">📍</div><h6>Ubicación</h6><div class="val">Ciudad de México</div><div class="sub">México</div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card h-100 text-center"><div style="font-size:1.8rem;margin-bottom:8px">🕘</div><h6>Horario</h6><div class="val">Lun – Sáb</div><div class="sub">9:00 – 18:00 hrs</div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card h-100 text-center"><div style="font-size:1.8rem;margin-bottom:8px">🚚</div><h6>Entrega</h6><div class="val">3 – 5 días hábiles</div><div class="sub"></div></div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /page-contacto -->
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer id="main-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand"><img src="images/sinamec labs.png" alt="logo" style="width:250px;border-radius:6px;filter:brightness(1) invert(1);"> </div>
+        <p class="footer-tagline">Corte y grabado láser artesanal en MDF y acrílico. Piezas únicas para cada ocasión.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <div class="footer-heading">Secciones</div>
+        <a class="footer-link" href="#" onclick="navigate('inicio');return false;">Inicio</a>
+        <a class="footer-link" href="#" onclick="navigate('servicios');return false;">Servicios</a>
+        <a class="footer-link" href="#" onclick="navigate('portafolio');return false;">Portafolio</a>
+        <a class="footer-link" href="#" onclick="navigate('contacto');return false;">Contacto</a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="footer-heading">Productos</div>
+        <a class="footer-link" href="#" onclick="navigate('portafolio');return false;">Decoración del Hogar</a>
+        <a class="footer-link" href="#" onclick="navigate('portafolio');return false;">Regalos Personalizados</a>
+        <a class="footer-link" href="#" onclick="navigate('portafolio');return false;">Letreros</a>
+        <a class="footer-link" href="#" onclick="navigate('portafolio');return false;">Llaveros</a>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-heading">Contacto</div>
+        <a class="footer-link" href="#" onclick="openWhatsApp();return false;">WhatsApp: +52 5661381199</a>
+        <a class="footer-link" href="mailto:laser@grupsinamec.com">laser@grupsinamec.com</a>
+        <span class="footer-link" style="cursor:default">Ciudad de México, México</span>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.07);margin:28px 0 18px">
+    <p class="footer-copy text-center mb-0">© 2025 Grupo SINAMEC-Laser · Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════
+     WHATSAPP FAB
+══════════════════════════════════════════════ -->
+<a id="whatsapp-fab" href="#" onclick="openWhatsApp();return false;" aria-label="WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+
+<!-- ══════════════════════════════════════════════
+     GALLERY MODAL
+══════════════════════════════════════════════ -->
+<div id="gallery-overlay" class="gallery-overlay" style="display:none;">
+  <div class="gallery-modal">
+
+    <!-- Header -->
+    <div class="gallery-modal-header">
+      <div>
+        <span id="gal-cat" class="gallery-modal-cat"></span>
+        <h4 id="gal-title" class="gallery-modal-title mt-1"></h4>
+      </div>
+      <button class="gallery-close-btn" onclick="closeGallery()" aria-label="Cerrar">✕</button>
+    </div>
+
+    <!-- Carousel -->
+    <div class="gallery-carousel-wrap" id="gal-slide-wrap">
+      <!-- Slides injected by JS -->
+      <button class="carousel-arrow arrow-left"  onclick="galPrev()" aria-label="Anterior">&#8249;</button>
+      <button class="carousel-arrow arrow-right" onclick="galNext()" aria-label="Siguiente">&#8250;</button>
+      <div class="carousel-counter" id="gal-counter"></div>
+      <div class="carousel-dots" id="gal-dots"></div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="gallery-thumbs" id="gal-thumbs"></div>
+
+    <!-- Footer -->
+    <div class="gallery-modal-footer">
+      <div>
+        <span id="gal-pill"></span>
+        <p id="gal-desc" class="gallery-desc"></p>
+      </div>
+      <button class="btn btn-wood px-3 py-2" style="white-space:nowrap" onclick="quoteProduct()">
+        <i class="bi bi-whatsapp me-1"></i> Cotizar este producto
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bootstrap JS (para el menú móvil) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
